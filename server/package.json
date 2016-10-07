@@ -1,0 +1,25 @@
+{
+  "name": "snippy-server",
+  "version": "0.0.1",
+  "description": "Code snippet index server",
+  "main": "serve.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbiespeed/snippy.git"
+  },
+  "author": "Robbie Speed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robbiespeed/snippy/issues"
+  },
+  "homepage": "https://github.com/robbiespeed/snippy#readme",
+  "dependencies": {
+    "fortune": "^4.1.5",
+    "fortune-json-api": "^2.0.10",
+    "fortune-nedb": "^1.1.3",
+    "fs-extra": "^0.30.0"
+  }
+}
