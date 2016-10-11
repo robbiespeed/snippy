@@ -1,0 +1,15 @@
+&.pad-all {
+  @include padding($content-pad);
+}
+
+&.pad-sides {
+  @include padding(null $content-pad);
+}
+
+&.pad-top {
+  padding-top: $content-pad;
+}
+
+&.pad-bottom {
+  padding-bottom: $content-pad;
+}

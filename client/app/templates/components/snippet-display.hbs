@@ -1,0 +1,9 @@
+<h1>{{snippet.name}}</h1>
+{{#if snippet.code}}
+  <h2>Code:</h2>
+  {{code-display code=snippet.code}}
+{{/if}}
+{{#if snippet.example}}
+  <h2>Example:</h2>
+  {{code-display code=snippet.example}}
+{{/if}}

@@ -1,1 +1,2 @@
+{"_id":"+hbvyJwhn504OaVkPvB3","name":"Hello World","code":"console.log('Hello World');","example":null,"tags":[]}
 {"_id":"cfB8sctTPadcVyw9uwBy","name":"Flatten","code":"list.reduce((flat, items) => flat.push(...items), []);","example":"[[ 1, 2 ], [ 3, 4 ], [ 5 ]].reduce(\n  (flat, items) => flat.push(...items), []\n);","tags":["0IQ81JVuHNd+FNBEGirE","iLL8AOIugyi13TvySi6l"]}

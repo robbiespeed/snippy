@@ -1,6 +1,8 @@
-Top Snippets:
-{{#unless model.error}}
-  {{snippet-list snippets=model}}
-{{else}}
-  {{model.error}}
-{{/unless}}
+<section class="content">
+  <h1 class="pad-sides pad-top">Top Snippets:</h1>
+  {{#unless model.error}}
+    {{snippet-list snippets=model}}
+  {{else}}
+    {{model.error}}
+  {{/unless}}
+</section>

@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('snippets', function() {
+    this.route('snippet', { path: '/:snippet_id' });
+  });
 });
 
 export default Router;

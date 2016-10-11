@@ -1,3 +1,17 @@
 {{#each snippets as |snippet|}}
-  {{snippet.name}}
+  <li>
+    {{#link-to 'snippets.snippet' snippet class="title"}}
+      {{snippet.name}}
+    {{/link-to}}
+    {{#if snippet.tags.length}}
+      <div class="tags">
+        Tags:
+        {{#each snippet.tags as |tag|}}
+          <div class="tag">
+            {{tag.name}}
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </li>
 {{/each}}
