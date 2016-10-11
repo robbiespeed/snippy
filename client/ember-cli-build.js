@@ -5,6 +5,17 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    babel: {
+      includePolyfill: true,
+    },
+    sassOptions: {
+      includePaths: [
+        'node_modules/bourbon/core',
+        'node_modules/bourbon-neat/core',
+        'node_modules/normalize.css',
+        // 'bower_components/font-awesome/scss',
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated

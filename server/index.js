@@ -35,6 +35,7 @@ const listener = fortune.net.http(store, {
 
 const server = express();
 
+// TODO: restrict to only allowed domains (localhost for now)
 server.use(cors());
 server.use(listener);
 
