@@ -1,11 +1,11 @@
 const fortune = require('fortune');
 const jsonApiSerializer = require('fortune-json-api');
 const nedbAdapter = require('fortune-nedb');
-const http = require('http');
-const path = require('path');
 const fse = require('fs-extra');
+const express = require('express');
+const cors = require('cors');
 
-const thisDir = path.basename(__dirname);
+const thisDir = __dirname;
 
 // clear temp folder, and copy default data into temp folder
 try {
@@ -33,7 +33,12 @@ const listener = fortune.net.http(store, {
   ]
 });
 
-const server = http.createServer(listener);
+const server = express();
 
-store.connect().then(() => server.listen(port));
-console.log(`serving snippy-api on 'localhost:${port}'`);
+server.use(cors());
+server.use(listener);
+
+store.connect().then(() => {
+  server.listen(1337);
+  console.log(`serving snippy-api on 'localhost:${port}'`);
+});
