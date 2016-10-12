@@ -1,6 +1,8 @@
 module.exports = {
-  name: { type: String },
-  code: { type: String },
-  example: { type: String },
-  tags: { link: 'tag', isArray: true },
+  name: String,
+  code: String,
+  example: String,
+  tags: [ Array('tag') ],
+  creator: [ 'user', 'snippets_created' ],
+  stargazers: [ Array('user'), 'snippets_starred' ]
 };
