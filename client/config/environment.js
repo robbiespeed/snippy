@@ -16,6 +16,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+
+      // TODO: pull this from process.env
       HOST: 'http://localhost:1337'
     }
   };

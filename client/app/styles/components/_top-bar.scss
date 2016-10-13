@@ -1,0 +1,23 @@
+.top-bar {
+  background-color: $almost-white;
+  height: 3em;
+  line-height: 3em;
+  display: flex;
+
+  .snippy {
+    padding: 0 1.25em 0 1em;
+    background-color: $medium-gray;
+    color: $white;
+    &:hover {
+      background-color: $action-color;
+    }
+    h1 {
+      margin: 0.36em 0;
+    }
+  }
+}
+
+.user-nav {
+  margin-left: auto;
+  padding: 0 1.25em;
+}

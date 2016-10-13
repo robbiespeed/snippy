@@ -1,0 +1,21 @@
+.code-display-flex {
+  display: flex;
+}
+.code-display {
+  background-color: $dark-gray;
+  color: $almost-white;
+  overflow: auto;
+
+  pre {
+    margin: 0;
+    font-family: inherit;
+  }
+  .line-numbers {
+    background-color: $medium-gray;
+    @include padding(null 0.25em);
+    text-align: right;
+  }
+  .lines {
+    @include padding(null 0.25em);
+  }
+}

@@ -1,10 +1,12 @@
-<div class="line-numbers">
-  {{#each lineNumbers as |lineNumber|}}
-    <div class="row">{{lineNumber}}</div>
-  {{/each}}
-</div>
-<div class="lines">
-  {{#each lines as |line|}}
-    <pre class="row">{{line}}</pre>
-  {{/each}}
+<div class="code-display-flex">
+  <div class="line-numbers">
+    {{#each lineNumbers as |lineNumber|}}
+      <div>{{lineNumber}}</div>
+    {{/each}}
+  </div>
+  <div class="lines">
+    {{#each lines as |line|}}
+      <pre>{{line}}</pre>
+    {{/each}}
+  </div>
 </div>

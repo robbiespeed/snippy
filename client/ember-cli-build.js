@@ -13,10 +13,17 @@ module.exports = function(defaults) {
         'node_modules/bourbon/core',
         'node_modules/bourbon-neat/core',
         'node_modules/normalize.css',
-        // 'bower_components/font-awesome/scss',
+        'bower_components/font-awesome/scss',
       ]
     }
   });
+
+  // Fonts
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.eot');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.svg');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

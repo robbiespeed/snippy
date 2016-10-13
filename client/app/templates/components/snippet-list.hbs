@@ -4,12 +4,12 @@
       {{snippet.name}}
     {{/link-to}}
     {{#if snippet.tags.length}}
+      Tags:
       <div class="tags">
-        Tags:
         {{#each snippet.tags as |tag|}}
-          <div class="tag">
+          <span>
             {{tag.name}}
-          </div>
+          </span>
         {{/each}}
       </div>
     {{/if}}

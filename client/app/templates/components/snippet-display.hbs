@@ -1,4 +1,14 @@
 <h1>{{snippet.name}}</h1>
+{{#if snippet.tags.length}}
+  Tags:
+  <div class="tags">
+    {{#each snippet.tags as |tag|}}
+      <span>
+        {{tag.name}}
+      </span>
+    {{/each}}
+  </div>
+{{/if}}
 {{#if snippet.code}}
   <h2>Code:</h2>
   {{code-display code=snippet.code}}

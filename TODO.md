@@ -1,6 +1,9 @@
 # TODO
 
-- Style code blocks so line numbers are on left (use flex)
+- Add endpoint to refresh github info, requires that we store most recent OAuth on loginUrl.
+  Use this endpoint when loading app with jwt from localStorage
+
+- Add jwt expiry, upon any request if expiry time is <= 50% issue a new jwt
 
 - Routes mapped to `name` rather than `id`
   - [ ] (Server) Disallow creation of snippets/tags with conflicting `name` (lower-case underscore)
@@ -20,3 +23,9 @@
   - `/tags` - shows list of all tags (perhaps searchable)
   - `/tags/:tag_name/edit` - Allows editing of tag
   - `/tags/new` - allow for creation of new tags
+
+
+- Code block improvements
+  - make line numbers un-copy/select-able
+  - non js line-wrapping
+  - align line numbers with wrapped lines

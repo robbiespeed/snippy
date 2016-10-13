@@ -1,5 +1,6 @@
 module.exports = {
-  nid: String,
+  uid: String,
+  ghid: Number,
   name: String,
   // github_oath: String,
   snippets_created: [ Array('snippet'), 'creator' ],

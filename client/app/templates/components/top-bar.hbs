@@ -1,0 +1,16 @@
+{{#link-to 'index' class="snippy"}}
+  <h1>snippy</h1>
+{{/link-to}}
+
+<section class="user-nav">
+  {{#if user.model}}
+    {{user.model.uid}}
+  {{else}}
+    <a
+      href={{user.loginUrl}}
+      class="button" disabled={{if user.isFetching "disabled"}}
+    >
+      {{fa "github"}} {{if user.isFetching "Signing In..." "Sign In"}}
+    </a>
+  {{/if}}
+</section>
