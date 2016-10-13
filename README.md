@@ -43,5 +43,5 @@ Then you can run
 Server can be accessed from `localhost:1337` with `Content-Type:application/vnd.api+json`
 
 Ex:
-* curl -H "Content-Type:application/vnd.api+json" localhost:1337
-* curl -H "Content-Type:application/vnd.api+json" localhost:1337/snippets
+* `curl -H "Content-Type:application/vnd.api+json" localhost:1337`
+* `curl -H "Content-Type:application/vnd.api+json" localhost:1337/snippets`
