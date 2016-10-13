@@ -5,6 +5,7 @@
 <section class="user-nav">
   {{#if user.model}}
     {{user.model.uid}}
+    <button {{action signOut}}>Sign Out</button>
   {{else}}
     <a
       href={{user.loginUrl}}

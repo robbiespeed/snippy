@@ -30,7 +30,8 @@ export default Ember.Service.extend({
         else {
           return this.get('model');
         }
-      });
+      })
+      .catch(() => this.logout());
   },
   logout () {
     this.setProperties({
