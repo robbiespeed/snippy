@@ -20,6 +20,7 @@ You will need the following things properly installed on your computer.
 * Set callback url of your OAuth Application to `http://localhost:1337/authorize`
 
 ## Running Client
+
 * `cd snippy/client`
 * `ember s`
 
@@ -32,10 +33,12 @@ You will need the following environment variables set
 * `export SNIPPY_GH_ID=YourOAuthAppID`
 * `export SNIPPY_GH_SCRT=YourOAuthAppSecret`
 * `export SNIPPY_SES_SCRT=CustomSecret`
-* `export SNIPPY_JWT_SCRT=CustomSecret`
+* `export SNIPPY_JWT_SCRT=CustomSecret`  
 
-* `cd snippy/server`
-* `node index`
+Then you can run
+
+* `cd snippy/server`  
+* `node index`  
 
 Server can be accessed from `localhost:1337` with `Content-Type:application/vnd.api+json`
 
