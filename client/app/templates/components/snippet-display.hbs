@@ -1,4 +1,5 @@
 <h1>{{snippet.name}}</h1>
+
 {{#if snippet.tags.length}}
   Tags:
   <div class="tags">
@@ -9,11 +10,23 @@
     {{/each}}
   </div>
 {{/if}}
+
 {{#if snippet.code}}
   <h2>Code:</h2>
   {{code-display code=snippet.code}}
 {{/if}}
+
 {{#if snippet.example}}
   <h2>Example:</h2>
   {{code-display code=snippet.example}}
 {{/if}}
+
+{{#if snippet.canEdit}}
+  {{#link-to 'snippets.edit' snippet class="button"}}
+    {{fa "pencil"}} Edit
+  {{/link-to}}
+{{/if}}
+
+<button disabled={{unless snippet.user.model "disabled"}} {{action toggleStar}}>
+  {{fa "star"}} {{if snippet.isStarred "Unstar" "Star"}} ({{snippet.starCount}})
+</button>

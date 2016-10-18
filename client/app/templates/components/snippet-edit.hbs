@@ -1,0 +1,27 @@
+<label>
+  Name
+  {{input type="text" value=model.name}}
+</label>
+<label>
+  Code
+  {{textarea class="code-edit" rows="6" value=model.code}}
+</label>
+<label>
+  Example
+  {{textarea class="code-edit" rows="6" value=model.example}}
+</label>
+<label for={{concat elementId "-tags"}}>Tags</label>
+{{tag-input tags=model.tags inputId=(concat elementId "-tags")}}
+<button disabled={{unless canSubmit "disabled"}}
+  {{action submit}}
+>
+  {{if model.isNew "Create" "Update"}}
+</button>
+{{#unless model.isNew}}
+  {{#link-to 'snippets.snippet' model class="button"}}
+    View
+  {{/link-to}}
+{{/unless}}
+{{#if isError}}
+  An error occured when trying to create the snippet
+{{/if}}

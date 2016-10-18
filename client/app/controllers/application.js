@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
       user.set('token', token);
       user.fetchUser();
 
-      this.get('hasAuthed', true);
+      this.set('hasAuthed', true);
       // so the query param in the url goes away
       run.next(() => this.set('token', null));
     }

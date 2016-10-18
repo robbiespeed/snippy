@@ -1,0 +1,20 @@
+<div class="input-wrap">
+  {{input id=inputId type="text" value=newTag enter=(action add)}}
+  <button disabled={{unless newTag "disabled"}} {{action add}}>{{fa "plus"}}</button>
+</div>
+{{#if isShowTags}}
+  <div class="tags-wrap">
+    {{#each pendingTags as |tag|}}
+      <span class="tag">
+        {{tag}} {{fa "refresh fa-spin fa-fw"}}
+        <button {{action remove pendingTags tag}}>{{fa "times"}}</button>
+      </span>
+    {{/each}}
+    {{#each tags as |tag|}}
+      <span class="tag">
+        {{tag.name}}
+        <button {{action remove tags tag}}>{{fa "times"}}</button>
+      </span>
+    {{/each}}
+  </div>
+{{/if}}

@@ -1,10 +1,16 @@
-{{#link-to 'index' class="snippy"}}
+{{#link-to 'index' class="button snippy"}}
   <h1>snippy</h1>
+{{/link-to}}
+{{#link-to 'snippets.index' class="button"}}
+  {{fa "search"}} Search
 {{/link-to}}
 
 <section class="user-nav">
   {{#if user.model}}
     {{user.model.uid}}
+    {{#link-to 'snippets.new' class="button"}}
+      {{fa "plus"}} Create Snippet
+    {{/link-to}}
     <button {{action signOut}}>Sign Out</button>
   {{else}}
     <a

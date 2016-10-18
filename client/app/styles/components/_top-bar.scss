@@ -4,8 +4,23 @@
   line-height: 3em;
   display: flex;
 
+  button,
+  .button {
+    margin-left: 1em;
+    padding: 0 1em;
+    height: 3em;
+    line-height: 3em;
+    display: block;
+    border-radius: 0;
+
+    .fa {
+      margin-right: 0.5em;
+    }
+  }
+
   .snippy {
-    padding: 0 1.25em 0 1em;
+    // padding: 0 1.25em 0 1em;
+    margin-left: 0;
     background-color: $medium-gray;
     color: $white;
     &:hover {
@@ -20,13 +35,4 @@
 .user-nav {
   display: flex;
   margin-left: auto;
-
-  & > button, & > .button {
-    margin-left: 1em;
-    padding: 0 1em;
-    height: 3em;
-    line-height: 3em;
-    display: block;
-    border-radius: 0;
-  }
 }

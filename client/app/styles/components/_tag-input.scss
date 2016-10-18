@@ -1,0 +1,34 @@
+.tag-input {
+  margin-bottom: $small-spacing;
+
+  .input-wrap {
+    display: flex;
+    margin-bottom: $small-spacing;
+
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+
+  .tags-wrap {
+  }
+  .tag {
+    background-color: $light-gray;
+    display: inline-flex;
+    line-height: 2;
+    padding-left: 0.5em;
+    font-weight: 600;
+
+    & > * {
+      line-height: 2;
+    }
+    button {
+      padding: 0;
+      margin-left: 0.5em;
+
+      .fa {
+        width: 2em;
+      }
+    }
+  }
+}

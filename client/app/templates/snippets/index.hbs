@@ -1,0 +1,13 @@
+<section class="content pad-sides pad-top">
+  <label>
+    Search Name
+    {{input type="text" value=searchNameString}}
+  </label>
+  <label>
+    Search Tags
+    {{input type="text" value=searchTagsString}}
+  </label>
+  {{snippet-list snippets=filteredSnippets}}
+</section>
+
+{{outlet}}

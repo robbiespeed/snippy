@@ -18,12 +18,20 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  margin-right: 0.5em;
+  line-height: 1.15;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover,
   &:focus {
     background-color: shade($action-color, 20%);
     color: #fff;
   }
+
+  @include focus($action-color);
 
   &:disabled {
     cursor: not-allowed;

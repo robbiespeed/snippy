@@ -9,6 +9,8 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('snippets', function() {
     this.route('snippet', { path: '/:snippet_id' });
+    this.route('new');
+    this.route('edit', { path: '/:snippet_id/edit' });
   });
 });
 

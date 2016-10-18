@@ -2,9 +2,12 @@
   display: flex;
 }
 .code-display {
+  font-family: $code-font-family;
+  padding: $base-spacing / 3;
   background-color: $dark-gray;
   color: $almost-white;
   overflow: auto;
+  margin-bottom: 0.75em;
 
   pre {
     margin: 0;
