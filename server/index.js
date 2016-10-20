@@ -71,9 +71,11 @@ server.get('/authed-user', (request, response) => {
   console.log('Authorization:', request.get('Authorization'));
   const jwtPayload = jwt.verify(request.get('Authorization'), JWT_SECRET);
   if (jwtPayload.userId) {
+    console.log('jwt userId:', jwtPayload.userId);
     store.find('user', jwtPayload.userId)
       .then((findResponse) => {
         if (findResponse.payload.count) {
+          console.log('found user:', findResponse.payload.records[0].id);
           return internalSerializer.processResponse(
             findResponse,
             {
@@ -164,12 +166,15 @@ server.get('/authorize', (request, response) => {
         return githubApiRequest(tokenData.access_token, 'user');
       })
       .then((user) => {
-        return store.find('user', null, { filter: { ghid: user.id } })
+        console.log('GH user.id:', user.id);
+        return store.find('user', null, { match: { ghid: user.id } })
           .then((findResponse) => {
             if (findResponse.payload.count) {
+              console.log('matching user found:', findResponse.payload.records[0].id);
               return findResponse.payload.records[0].id;
             }
             else {
+              console.log('no matching user found, will create one');
               // TODO: protect from overlap even though github won't have any
               return store.create('user', {
                 ghid: user.id,
